@@ -1,3 +1,5 @@
+import random
+
 quotes = [
     "Ecoutez-moi, Monsieur Shakespeare, nous avons beau être ou ne pas être, nous sommes !",
     "On doit pouvoir choisir entre s'écouter parler et se faire entendre."
@@ -14,13 +16,23 @@ characters = [
 ]
 
 def get_random_item_in(my_list):
-    # todo: get a random number
-    item = my_list[0] # get a quote from a list
-    print(item) # show the quote in the interpreter
-    return "program is over" # returned value
+    # get a random number
+    rand_num = random.randint(0, len(my_list) - 1)
+    item = my_list[rand_num] # get a quote from a list
+    # returned value
+    return item
 
-user_answer = 'A'
+def capitalize(words):
+    for word in words:
+        word.capitalize()
+
+def message(character, quote):
+    capitalize(character)
+    capitalize(quote)
+    return "{} à dit: \'{}\'".format(character, quote)
+
+user_answer = input('Appuyez sur enter pour une nouvelle citation ou \'B\' pour quitter')
 
 while user_answer != 'B':
-    print(get_random_item_in(quotes))
+    print(message(get_random_item_in(characters),get_random_item_in(quotes)))
     user_answer = input('Appuyez sur enter pour une nouvelle citation ou \'B\' pour quitter')
