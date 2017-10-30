@@ -12,3 +12,10 @@ characters = [
     "le chat potté",
     "Kirikou"
 ]
+
+if user_answer == "B":
+    pass
+elif user_answer == "C":
+    print("C pas la bonne réponse ! Et G pas d’humour, je C...")
+else:
+    # show another quote
