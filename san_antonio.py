@@ -21,7 +21,7 @@ def message(character, quote):
     n_character = character.capitalize()
     n_quote = quote.capitalize()
     #renvoie le message à afficher sur le prompt
-    return "{} a dit : {}".format(n_character, n_quote)
+    return "{} a dit : {}".format(n_character, n_quote.strip())
 
 def get_random_item_in(my_list):
     #renvoie un entier compris en 0 et la taille de la liste -1
